@@ -1,0 +1,32 @@
+
+#extend("base"):
+    #export("body"):
+        <h1>Create New Acronym</h1>
+        <form method="post">
+            <div class="form-group">
+                <label for="short">Acronym</label>
+                <input type="text" name="short" class="form-control"id="short"/>
+            </div> 
+
+            <div class="form-group">
+                <label for="long">Meaning</label>
+                <input type="text" name="long" class="form-control" id="long"/>
+            </div> 
+
+            <div class="form-group">
+                <label for="userID">User</label>
+                <select type="text" name="userID" class="form-control" id="userID">
+
+                    #for(user in users ):
+                        <option value="#(user.id)">
+                            #(user.name)
+                        </option>
+                    #endfor
+                </select>
+            </div> 
+            <button type="submit" class="btn btn-primary" >
+                Sbumit
+            </button>
+        </form>
+    #endexport
+#endextend
